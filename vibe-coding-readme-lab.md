@@ -211,10 +211,50 @@ Before finishing, confirm that:
 - [ ] You answered Copilot's numbered questions
 - [ ] Copilot summarized the requirements before writing
 - [ ] You confirmed the summary
-- [ ] The README covers all 5 required items
+- [ ] The README covers all required items
 - [ ] The README is easy to read
 - [ ] You know where the final `README.md` was saved
 - [ ] You know the recommended next step
+
+---
+
+## Optional: Prompt for Creating an SDS
+
+Use this after the README is confirmed and you want Copilot to turn the approved scope into an SDS (Software Design Specification).
+
+```text
+Please create an SDS (Software Design Specification) document for the Fusion User Profile Web Application.
+Base it on the confirmed README and requirements.
+Before drafting the SDS, ask short numbered clarification questions only if a critical design decision is still missing.
+
+The SDS should include:
+1. System purpose and scope
+2. Architecture overview
+3. Frontend design using React and Atomic Design
+4. Backend design using .NET 10 Web API
+5. Repository Pattern and logical layers
+6. Data model and in-memory storage approach
+7. API design, including /health
+8. Non-functional requirements
+9. Assumptions, constraints, risks, and future upgrade path
+10. Acceptance or review checklist
+
+Use clear language that both product and engineering readers can follow.
+Summarize the SDS outline first and wait for my confirmation before creating the document.
+Save the result as SDS.md.
+```
+
+If the outline looks correct, reply:
+
+```text
+Confirmed. Please create the SDS.md.
+```
+
+If the SDS feels too technical, ask:
+
+```text
+Please simplify the SDS wording while keeping the architecture, API, and data design clear.
+```
 
 ---
 
